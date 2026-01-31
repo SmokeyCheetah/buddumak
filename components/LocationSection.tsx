@@ -1,6 +1,5 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Mail, Instagram } from 'lucide-react';
-import { RESTAURANT_COORDS } from '../constants';
 import { Translation } from '../types';
 
 interface LocationSectionProps {
@@ -8,6 +7,10 @@ interface LocationSectionProps {
 }
 
 const LocationSection: React.FC<LocationSectionProps> = ({ t }) => {
+  // Including the business name in the query ensures the map pin points to the restaurant, not just the street.
+  const mapAddress = "BUDDUMAK, Alt Zeilsheim 27, 65931 Frankfurt am Main";
+  const mapQuery = encodeURIComponent(mapAddress);
+
   return (
     <section id="location" className="relative py-24 bg-neutral-900">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -89,7 +92,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({ t }) => {
                 scrolling="no" 
                 marginHeight={0} 
                 marginWidth={0} 
-                src={`https://maps.google.com/maps?q=${RESTAURANT_COORDS.lat},${RESTAURANT_COORDS.lng}&hl=en&z=15&output=embed`}
+                src={`https://maps.google.com/maps?q=${mapQuery}&hl=de&z=16&output=embed`}
                 className="filter grayscale contrast-125 opacity-80 hover:opacity-100 hover:filter-none transition-all duration-700"
                 title="Buddumak Location"
             >

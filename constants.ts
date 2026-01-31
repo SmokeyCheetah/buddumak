@@ -1,8 +1,8 @@
 import { MenuItem, Review, Translation } from './types';
 
 export const RESTAURANT_COORDS = {
-  lat: 50.0973,
-  lng: 8.4964
+  lat: 50.0954337,
+  lng: 8.4918457
 };
 
 export const MENU_ITEMS: MenuItem[] = [
@@ -100,7 +100,7 @@ export const MENU_ITEMS: MenuItem[] = [
 ];
 
 // Common link for all reviews to the Google Maps place
-export const GOOGLE_MAPS_LINK = "https://www.google.com/maps/place/BUDDUMAK/@50.0944263,8.4961642,16.17z/data=!4m8!3m7!1s0x47bda12ee1706895:0x32f1fa7579c75fa2!8m2!3d50.0954337!4d8.4918457!9m1!1b1!16s%2Fg%2F11xl4gv2xc";
+export const GOOGLE_MAPS_LINK = "https://www.google.com/maps/place/BUDDUMAK/@50.0944263,8.4961642,16z/data=!4m16!1m9!3m8!1s0x47bda12ee1706895:0x32f1fa7579c75fa2!2sBUDDUMAK!8m2!3d50.0954337!4d8.4918457!9m1!1b1!16s%2Fg%2F11xl4gv2xc!3m5!1s0x47bda12ee1706895:0x32f1fa7579c75fa2!8m2!3d50.0954337!4d8.4918457!16s%2Fg%2F11xl4gv2xc";
 
 export const REVIEWS: Review[] = [
   { 
